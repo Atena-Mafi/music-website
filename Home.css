@@ -141,7 +141,7 @@ margin: 0 auto;
   position: absolute;
   bottom: 0;
   left: 49%;
-  width: 2%; /* عرض خط (50% از عرض متن) */
+  width: 2%;
   height: 2px;
   margin: 0 auto;
  }
