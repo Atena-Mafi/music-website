@@ -20,6 +20,7 @@
     <link rel="icon" href="data:," />
   </head>
   <body>
+    <!-- header starts -->
     <header>
       <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container-fluid">
@@ -36,9 +37,9 @@
           </button>
 
           <!-- logo starts -->
-          <a class="navbar-brand ms-4" href="../Home.html">
+          <a class="navbar-brand ms-4" href="./Home.html">
             <img
-              src="../assets/music-note-sound-circle-outline-512.webp"
+              src="./assets/music-note-sound-circle-outline-512.webp"
               alt="Music icone"
               width="60"
               height="60"
@@ -51,7 +52,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto gap-3">
               <li class="nav-item">
-                <a class="nav-link active" href="#"
+                <a class="nav-link active" id="searchIcon" href="#"
                   ><i class="bi bi-search mt-5 me-3 active"></i
                 ></a>
               </li>
@@ -59,7 +60,7 @@
                 <a
                   class="nav-link active d-flex align-items-center"
                   aria-current="page"
-                  href="../Home.html"
+                  href="./Home.html"
                 >
                   Home</a
                 >
@@ -96,6 +97,20 @@
                 >
               </li>
             </ul>
+            <form id="searchForm" class="d-none d-flex">
+              <label for="searching" class="form-label"></label>
+              <input
+                class="form-control"
+                id="searching"
+                placeholder="Search for music..."
+              />
+              <div class="box-buttons">
+                <button id="closeSearch"><i class="bi bi-x-lg"></i></button>
+                <button type="submit" class="btn search-btn">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </nav>

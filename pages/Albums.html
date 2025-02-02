@@ -20,87 +20,102 @@
     <link rel="icon" href="data:," />
   </head>
   <body>
+    <!-- header starts -->
     <header>
-      <nav class="navbar navbar-expand-sm navbar-light">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- logo starts -->
-          <a class="navbar-brand ms-4" href="../Home.html">
-            <img
-              src="../assets/music-note-sound-circle-outline-512.webp"
-              alt="Music icone"
-              width="60"
-              height="60"
-            />
-          </a>
-          <!-- logo ends -->
-
-          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto gap-3">
-              <li class="nav-item">
-                <a class="nav-link active" href="#"
-                  ><i class="bi bi-search mt-5 me-3 active"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active d-flex align-items-center"
-                  aria-current="page"
-                  href="../Home.html"
-                >
-                  Home</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" href="./pages/Artists.html"
-                  >Artists</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./pages/Albums.html">Albums</a>
-              </li>
-              <li class="nav-item Library">
-                <a class="nav-link active" href="./pages/Library.html"
-                  >Library</a
-                >
-              </li>
-              <!-- divider -->
-              <li class="nav-item divider"></li>
-              <!-- divider -->
-              <li class="nav-item">
-                <a
-                  class="nav-link active ms-3 Sign-In"
-                  href="./pages/Sign-IN.html"
-                  >Sign In</a
-                >
-              </li>
-              <li class="nav-item Sign-Up">
-                <a
-                  class="nav-link active Sign-Up text-dark"
-                  href="./pages/Sign-out.html"
-                  >Sign Up</a
-                >
-              </li>
-            </ul>
+        <nav class="navbar navbar-expand-sm navbar-light">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <!-- logo starts -->
+            <a class="navbar-brand ms-4" href="./Home.html">
+              <img
+                src="./assets/music-note-sound-circle-outline-512.webp"
+                alt="Music icone"
+                width="60"
+                height="60"
+              />
+            </a>
+            <!-- logo ends -->
+  
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item">
+                  <a class="nav-link active" id="searchIcon" href="#"
+                    ><i class="bi bi-search mt-5 me-3 active"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active d-flex align-items-center"
+                    aria-current="page"
+                    href="./Home.html"
+                  >
+                    Home</a
+                  >
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link active" href="./pages/Artists.html"
+                    >Artists</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="./pages/Albums.html">Albums</a>
+                </li>
+                <li class="nav-item Library">
+                  <a class="nav-link active" href="./pages/Library.html"
+                    >Library</a
+                  >
+                </li>
+                <!-- divider -->
+                <li class="nav-item divider"></li>
+                <!-- divider -->
+                <li class="nav-item">
+                  <a
+                    class="nav-link active ms-3 Sign-In"
+                    href="./pages/Sign-IN.html"
+                    >Sign In</a
+                  >
+                </li>
+                <li class="nav-item Sign-Up">
+                  <a
+                    class="nav-link active Sign-Up text-dark"
+                    href="./pages/Sign-out.html"
+                    >Sign Up</a
+                  >
+                </li>
+              </ul>
+              <form id="searchForm" class="d-none d-flex">
+                <label for="searching" class="form-label"></label>
+                <input
+                  class="form-control"
+                  id="searching"
+                  placeholder="Search for music..."
+                />
+                <div class="box-buttons">
+                  <button id="closeSearch"><i class="bi bi-x-lg"></i></button>
+                  <button type="submit" class="btn search-btn">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <!-- header ends -->
+        </nav>
+      </header>
+      <!-- header ends -->
 
     <!-- footer starts -->
 
