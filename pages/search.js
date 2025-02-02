@@ -13,12 +13,12 @@ searchIcon.addEventListener("click",(e)=>{
 })
 
 searchBtn.addEventListener("click",(e)=>{
-  searchingInput.value="";
+ 
   e.preventDefault();
   const search=searchingInput.value.trim();
   if(search){
   window.location.href=`search.html?query=${encodeURIComponent(search)}`
-
+  searchingInput.value="";
   }
   
 });
