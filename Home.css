@@ -225,6 +225,16 @@ border-radius:50%;
  }
 
 
+
+ .arti img:hover{
+  opacity: 0.5;
+  border-radius:50%;
+   }
+  
+
+
+
+
  .small-boxs1{
  display: flex;
  justify-content: center;
@@ -239,12 +249,22 @@ border-radius:50%;
 
   width: 180px;
 height: 180px;
-background-color: #FC0;
 text-align:center ;
 display: flex;
 flex-direction: column;
 justify-content: center;
  }
+
+
+.small-box a:hover{
+
+  z-index: 2;
+  color: #ffffff;
+  text-decoration: underline;
+   }
+  
+  
+
 
 
  .f-row,.s-row,.th-row{
@@ -421,7 +441,7 @@ position: absolute;
    
     }
     
-
+ 
 
 
     .sb21{
@@ -579,8 +599,49 @@ align-items: center;
    color:#b8a48e;
    text-align: left;
    background-color: #0d0d0d;
+
    
   }
+
+
+
+  .card-img-top{
+
+    position: relative;
+  }
+
+
+
+  .bi-play-circle{
+    font-size: 100px;
+   top:10%;
+   left:25%;
+    position: absolute;
+    color: #0d0d0d;
+    opacity: 0;
+  }
+
+
+  .card:hover {
+
+    padding: 2px;
+    
+   }
+
+
+
+   .bi-play-circle:hover{
+  
+    opacity:1;
+  }
+
+
+
+
+
+
+
+
 
 
 
@@ -618,29 +679,43 @@ gap: 20px;
 .footer-items{
 display: flex;
 align-items: center;
-justify-content:space-evenly;
+justify-content:center;
 
   width: 100%;
-  gap: 60px;
+  gap: 90px;
+  margin-left: 140px;
 }
 
 
 
 .footer-item{
-height: 200px;
- 
-  text-wrap: wrap;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  width: 200px;
+  width: 300px;
   height: 250px;
-  text-justify: distribute-all-lines;
   color: #b8a48e;
-  
+  gap: 8px;
 }
+
+
+
+.footer-item p:hover{
+
+   font-size: larger;
+  }
+
+  .footer-item a:hover{
+
+     font-size: large;
+    }
+  
+
+
+
+
 
 .footer-item p{
   font-weight: 700;
@@ -654,10 +729,8 @@ height: 200px;
 
 
 
+
 /* foooter */
-
-
-
 
 
 

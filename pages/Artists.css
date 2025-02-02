@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+a{
+
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+
+background-color:#0d0d0d;
+
+}
+
+
+
+
+
+.divider{
+  margin-top: 0.5rem;
+    height:30px;
+    border-left: 1px solid hwb(0 100% 0% / 0.705);
+   }
+
+
+   .Sign-Up{
+    background-color: #ffffff;
+    height:2.5rem;
+    width: 6rem;
+    color: black;
+    border-radius: 4px;
+    text-align: center;
+
+   }
+
+   .nav-item .nav-link{
+    position: relative;
+   }
+
+
+   .nav-item:not(:first-child) .nav-link::after{
+    content:"";
+    position:absolute;
+    left: 0;
+  bottom: 0; 
+   width: 0;
+   height: 2px;
+   background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+   }
+
+
+
+
+   .nav-item:not(:last-child) .nav-link:hover::after{
+    width: 100%;
+    
+ 
+   }
+
+   .navbar{
+ background-color: #b8a48e ;
+ height: 4.5rem;
+ display: flex;
+ align-items: center;
+   
+   }
+
+

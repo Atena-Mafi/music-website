@@ -93,6 +93,7 @@ async function  popularSongs() {
         <div class="card-body">
           <h5 class="card-title">${ele.name}</h5>
           <p class="card-text">${ele.artist_name}</p>
+          <i class="bi bi-play-circle"></i>
           </div>`
           popularTracks.append(music);
      })
