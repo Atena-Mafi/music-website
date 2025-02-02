@@ -51,7 +51,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto gap-3">
               <li class="nav-item">
-                <a class="nav-link active" href="#"
+                <a class="nav-link active"  id="searchIcon" href="#"
                   ><i class="bi bi-search mt-5 me-3 active"></i
                 ></a>
               </li>
@@ -84,6 +84,13 @@
                 <a class="nav-link active Sign-Up text-dark" href="./pages/Sign-out.html">Sign Up</a>
               </li>
             </ul>
+            <form id="searchForm" class="d-none d-flex">
+            <label for="searching" class="form-label"></label>
+            <input class="form-control" id="searching" placeholder="Search for music...">
+           <div class="box-buttons">  <button id="closeSearch"><i class="bi bi-x-lg"></i></button>
+                  <button type="submit" class="btn  search-btn"><i class="bi bi-search"></i></button>
+                </div>
+                </form>
           </div>
         </div>
       </nav>

@@ -72,6 +72,70 @@ background-color:#0d0d0d;
 
 
 
+   
+   #searchForm{
+
+   width: 90%;
+    height: 4rem;
+  
+   }
+
+
+   #searching{
+
+    background-color:#b8a48e;
+    border: #b8a48e solid;
+    border-radius: 0%;
+    outline: none;
+    box-shadow: none;
+   }
+
+
+
+   .search-btn{
+     width: 100px;
+     background-color: #0d0d0d;
+     border-radius: 0%;
+     color: #b8a48e;
+     height: 4rem;
+   }
+
+   .box-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+
+ #closeSearch{
+  width:2%;
+  background-color:  #b8a48e;
+  border-radius: 0%;
+  color:#0d0d0d;
+  height: 4rem;
+  outline: none;
+  box-shadow: none;
+  border: none;
+   margin-right: 15px;
+  font-size:30px;
+
+  }
+
+
+   .search-btn:hover{
+   
+    background-color: #0d0d0d;
+
+  }
+
+
+
+
+
+
+
+
+
 
  /* carousel starts  */ 
 
