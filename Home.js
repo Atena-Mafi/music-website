@@ -56,17 +56,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// const topRow=document.querySelector(".top-row");
-// const bottomRow=document.querySelector(".bottom-row");
-
-// const bigBox1=document.querySelector(".big-box1");
-// const bigBox2=document.querySelector(".big-box2");
-// const smallBoxs1=document.querySelector(".small-boxs1");
-// const smallBoxs2=document.querySelector(".small-boxs2");
 
 
-// async function types(musics) {
+
+
+
+
+
+
+
+const popularTracks=document.querySelector(".popular-tracks");
+
+async function  popularSongs() {
+  try{
+
+    const response=await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&order=popularity_total&limit=12"),{
+    method:"GET",
+    headers:{
+       "Content-Type":"application/json",
+    }
+    })
+
+    if(!response.ok){
+
+      throw new Error(`Erro: ${response.status}`)
+    }
+     
+    const data= await response.json();
+    const musics=data.results;
+     musics.forEach((ele)=>{
+       
+     const music=document.createElement("div");
+     music.classList.add("card");
+     music.innerHTML=
+     `<img src="${ele?.image||"default.jpg"}" class="card-img-top" alt="${ele.name}">
+        <div class="card-body">
+          <h5 class="card-title">${ele.name}</h5>
+          <p class="card-text">${ele.artist_name}</p>
+          </div>`
+          popularTracks.append(music);
+     })
     
-// const musics=
+    console.log(musics);
+    
+    
+  }
 
-// }
+
+  catch(err){
+    console.log(err.message);
+    
+  }
+
+}
+
+
+popularSongs();
+
+

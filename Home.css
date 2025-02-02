@@ -519,15 +519,147 @@ position: absolute;
 
 
 
+    .searchbox-music{
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      margin-bottom: 70px;
+          margin-top: 30px;
+          color: #b8a48e;
+          background: url("https://www.last.fm/static/images/music-landing/albums_bg_1E6875.8cb84eb88196.jpg") no-repeat center/cover ;
+          filter: brightness(0.9);
+          padding: 20px;
+    }
+
+
+
+.searchbox{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+margin-bottom: 30px;
+}
+
+
+
+.searchbox input{
+ width: 350px;
+ color: #b8a48e;
+ 
+  }
+  
+
+
+
+/* 
+  popular-tracks */
+
+
+  .popular-tracks{
+
+justify-content: center;
+align-items: center;
+ 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+
+
+  .card {
+
+   width: 200px;
+    height:310px;
+   color:#b8a48e;
+   text-align: left;
+   background-color: #0d0d0d;
+   
+  }
+
+
+
+  .card-body h5{
+ font-size:16px;
+ font-weight: 700;
+  }
+
+
+  .card-body p{
+    font-size:14px;
+   
+     }
+
+
+
+  /* popular-tracks */
+
+
+/* footer */
+
+
+.footer{
+
+gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: hwb(31 56% 28% / 0.267) solid 0.5px;
+  margin-top: 20px;
+}
+
+
+.footer-items{
+display: flex;
+align-items: center;
+justify-content:space-evenly;
+
+  width: 100%;
+  gap: 60px;
+
+
+
+
+.footer-item{
+height: 200px;
+ 
+  text-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  width: 200px;
+  height: 250px;
+  text-justify: distribute-all-lines;
+  color: #b8a48e;
+  
+}
+
+.footer-item p{
+  font-weight: 700;
+}
+
+.copyright{
+  color: #b8a48e;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+
+
+/* foooter */
 
 
 
 
 
-
-
-
-/* tags */
 
 
 @media(min-width:1440px){
