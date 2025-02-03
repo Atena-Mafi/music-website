@@ -225,3 +225,63 @@ background-color:#0d0d0d;
     
     
     /* foooter */
+   .result{
+  margin: 30px 140px;
+   color: #b8a48e;    
+   font-weight: 600;
+   }
+       
+
+
+   .search-results{
+
+    margin-left: 5px;
+   }
+
+    .show-result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: chocolate;
+        gap: 20px;
+        width: 100%;
+    }
+
+
+.artists-container{
+height: 500px;
+width: 100%;
+
+    background-color: aqua;
+}
+
+
+
+.albums-container{
+    height: 500px;
+    width: 100%;
+    background-color: darkgoldenrod;
+}
+
+
+
+.tracks-container a{
+  margin: 2px;
+}
+
+
+
+.artists-container a{
+    margin: 2px;
+    }
+    
+    
+    
+    .albums-container a{
+        margin: 2px;
+    }
+    
+    
+    
+    
