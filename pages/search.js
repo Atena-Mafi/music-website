@@ -59,7 +59,8 @@ searchesults.textContent=searchQuery;
 
 async function searched() {
 try{
-const response=await fetch(`${proxy}https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`,{
+ 
+const response=await fetch(`https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`,{
 
 method:"GET",
 headers:{
@@ -78,7 +79,8 @@ return data.data;
 }
 catch(err){
 console.log(err.message);
-}    
+}  
+return null;  
 }
 
 
@@ -145,12 +147,12 @@ if (!tracks.has(item.track.id)) {
     
     const trackCard=document.createElement("div");
    trackCard.classList.add("card");
-    card.innerHTML=`<img src="${item.album.cover_medium}" class="card-img" alt="${item.title}">
+   trackCard.innerHTML=`<img src="${item.album.cover_medium}" class="card-img" alt="${item.title}">
     <div class="card-img-overlay">
       <a class="card-text">${item.artist.name}</a>
     </div>
     `;
-    tracksContainer.append(artistCard);
+    tracksContainer.append(trackCard);
     tracks.set(item.track.id,true);
     }
 });
