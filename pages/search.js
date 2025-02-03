@@ -59,11 +59,11 @@ searchesults.textContent=searchQuery;
 
 async function searched() {
 try{
-const response=await fetch(`https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`,{
+const response=await fetch(`${proxy}https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`,{
 
 method:"GET",
 headers:{
-"Content-Type":"application.json",
+"Content-Type":"application/json",
 }
 
 })
