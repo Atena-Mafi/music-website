@@ -59,9 +59,8 @@ searchesults.textContent=searchQuery;
 
 async function searched() {
 try{
-    const response = await fetch(
-        `https://itunes.apple.com/search?term=${searchQuery}&media=music&limit=12`
-      );
+    const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&search=${encodeURIComponent(searchQuery)}`;
+    const response = await fetch(apiUrl);
 
 if (!response.ok) {
     throw new Error(`Error:${response.status}`);
