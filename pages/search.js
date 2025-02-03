@@ -59,7 +59,7 @@ searchesults.textContent=searchQuery;
 
 async function searched() {
 try{
-   const proxyUrl = "https://api.allorigins.win/get?url="
+    const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
    const apiUrl = `https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`;
    const response = await fetch(`${proxyUrl}${encodeURIComponent(apiUrl)}`);
 
