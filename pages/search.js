@@ -59,10 +59,10 @@ searchesults.textContent=searchQuery;
 
 async function searched() {
 try{
-    const proxyUrl = "https://corsproxy.io/?";
-    const deezerApiUrl = `https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`;
+   const proxyUrl = "https://api.anyorigin.com/get?url=";
+const apiUrl = `https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`;
     
-    const response = await fetch(proxyUrl + encodeURIComponent(deezerApiUrl), {
+    const response = await fetch(proxyUrl + encodeURIComponent(apiUrl), {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
