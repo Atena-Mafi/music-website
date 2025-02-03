@@ -35,7 +35,7 @@ closeSearchBtn.addEventListener("click",(e)=>{
 
 searchingInput.addEventListener("keypress",(e)=>{
 
-if(e.ket==="Enter"){
+if(e.key==="Enter"){
   searchBtn.click();
 
 }
