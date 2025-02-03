@@ -98,7 +98,7 @@ const albumsContainer=document.querySelector(".albums-container");
 const tracksContainer=document.querySelector(".tracks-container");
 
 
- artistContainer.innerHTML="";
+ artistsContainer.innerHTML="";
  albumsContainer.innerHTML="";
 tracksContainer.innerHTML="";
 
