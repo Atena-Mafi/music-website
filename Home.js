@@ -19,7 +19,7 @@ searchBtn.addEventListener("click",(e)=>{
   if(search){
   window.location.href=`search.html?query=${encodeURIComponent(search)}`
   searchingInput.value="";
-  }ححححححححگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگگ
+}
   
 });
 
