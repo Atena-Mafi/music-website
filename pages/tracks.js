@@ -17,7 +17,7 @@ searchBtn.addEventListener("click",(e)=>{
   e.preventDefault();
   const search=searchingInput.value.trim();
   if(search){
-  window.location.href=`search.html?query=${encodeURIComponent(search)}`
+  window.location.href=`/pages/search.html?query=${encodeURIComponent(search)}`
   searchingInput.value="";
   }
   

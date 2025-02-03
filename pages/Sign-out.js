@@ -17,7 +17,7 @@ searchBtn.addEventListener("click",(e)=>{
   e.preventDefault();
   const search=searchingInput.value.trim();
   if(search){
-  window.location.href=`search.html?query=${encodeURIComponent(search)}`
+  window.location.href=`/pages/search.html?query=${encodeURIComponent(search)}`
   searchingInput.value="";
   }
   
@@ -35,7 +35,7 @@ closeSearchBtn.addEventListener("click",(e)=>{
 
 searchingInput.addEventListener("keypress",(e)=>{
 
-if(e.ket==="Enter"){
+if(e.key==="Enter"){
   searchBtn.click();
 
 }
