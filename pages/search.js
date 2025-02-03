@@ -48,7 +48,7 @@ if(e.key==="Enter"){
 
 
 
-
+// show searchbox result
 
 const urlParams=new URLSearchParams(window.location.search);
 const searchQuery=urlParams.get("query");
@@ -78,13 +78,90 @@ return data.data;
 }
 catch(err){
 console.log(err.message);
+}    
 }
 
 
 
+
+async function displayResults() {
+const results=await searched();
+
+if(!results || results.length===0){
+    searchesults.textContent="Sorry nothing found."
+
+}
+
+
+const artistsContainer=document.querySelector(".artists-container");
+const albumsContainer=document.querySelector(".albums-container");
+const tracksContainer=document.querySelector(".tracks-container");
+
+
+ artistContainer.innerHTML="";
+ albumsContainer.innerHTML="";
+tracksContainer.innerHTML="";
+
+ const artists=new Map();
+const albums=new Map();
+const tracks=new Map();
+
+
+results.forEach(item => {
+// artists    
+if (!artists.has(item.artist.id)) {
+    
+const artistCard=document.createElement("div");
+artistCard.classList.add("card");
+artistCard.innerHTML=`<img src="${item.artist.picture_medium}" class="card-img" alt="${item.artist.name}">
+<div class="card-img-overlay">
+  <a class="card-text">${item.artist.name}</a>
+</div>
+`;
+artistsContainer.append(artistCard);
+artists.set(item.artist.id,true);
+}
+
+
+// albums   
+if (!albums.has(item.album.id)) {
+    
+    const albumCard=document.createElement("div");
+    albumCard.classList.add("card");
+    albumCard.innerHTML=`<img src="${item.album.cover_medium}" class="card-img" alt="${item.album.title}">
+    <div class="card-img-overlay">
+    <a class="card-text">${item.album.title}</a>
+    <a class="card-text">${item.artist.name}</a>
+    </div>
+    `;
+    albumsContainer.append(albumCard);
+   albums.set(item.album.id,true);
+    }
 
     
+
+    // tracks
+if (!tracks.has(item.track.id)) {
+    
+    const trackCard=document.createElement("div");
+   trackCard.classList.add("card");
+    card.innerHTML=`<img src="${item.album.cover_medium}" class="card-img" alt="${item.title}">
+    <div class="card-img-overlay">
+      <a class="card-text">${item.artist.name}</a>
+    </div>
+    `;
+    tracksContainer.append(artistCard);
+    tracks.set(item.track.id,true);
+    }
+});
+
 }
+
+
+
+
+displayResults()
+
 
 
 
