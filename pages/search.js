@@ -59,10 +59,9 @@ searchesults.textContent=searchQuery;
 
 async function searched() {
 try{
-    const apiUrl = `https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`;
-    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
-    
-    const response = await fetch(proxyUrl);
+    const response = await fetch(
+        `https://itunes.apple.com/search?term=${searchQuery}&media=music&limit=12`
+      );
 
 if (!response.ok) {
     throw new Error(`Error:${response.status}`);
