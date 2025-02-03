@@ -1,3 +1,5 @@
+
+// searchboxFunction starts
 const searchIcon=document.querySelector("#searchIcon");
 const navbarNav=document.querySelector(".navbar-nav");
 const searchForm=document.querySelector("#searchForm");
@@ -42,6 +44,11 @@ if(e.key==="Enter"){
 
 })
 
+// searchboxFunction ends
+
+
+
+
 
 const urlParams=new URLSearchParams(window.location.search);
 const searchQuery=urlParams.get("query");
@@ -55,8 +62,6 @@ try{
 const response=await fetch(`https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`,{
 
 method:"GET",
-
-
 headers:{
 "Content-Type":"application.json",
 }
@@ -68,24 +73,11 @@ if (!response.ok) {
 }
 
 const data= await response.json();
+return data.data;
 
-const artists = data.forEach((arti)=> {
-    const artist=document.createElement("div");
-    artist.classList.add("card")
-      artist.innerHtml=`
-  <img src="${arti.img}" class="card-img" alt="${arti.name}">
-  <div class="card-img-overlay">
-    <a class="card-text">${arti.artist}</a>
-  </div>
-`
-
-});
 }
 catch(err){
-
 console.log(err.message);
-
-
 }
 
 
@@ -94,9 +86,34 @@ console.log(err.message);
     
 }
 
+
+
+
+// show searchbox result  ends
+
+
+
+
+
+
+
 // artist.innerHtml=`
 // <img src="${arti.img}" class="card-img" alt="${arti.name}">
 // <div class="card-img-overlay">
 //   <h5 class="card-title">Card title${song.name}</h5>
 //   <p class="card-text">${arti.artist}</p>
 // </div>
+
+
+
+// const artists = data.forEach((arti)=> {
+//     const artist=document.createElement("div");
+//     artist.classList.add("card")
+//       artist.innerHtml=`
+//   <img src="${arti.img}" class="card-img" alt="${arti.name}">
+//   <div class="card-img-overlay">
+//     <a class="card-text">${arti.artist}</a>
+//   </div>
+// `
+
+// });
