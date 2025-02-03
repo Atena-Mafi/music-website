@@ -160,7 +160,7 @@ if (!tracks.has(item.track.id)) {
 
 
 
-displayResults()
+displayResults();
 
 
 
