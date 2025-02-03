@@ -45,21 +45,58 @@ if(e.key==="Enter"){
 
 const urlParams=new URLSearchParams(window.location.search);
 const searchQuery=urlParams.get("query");
-console.log(searchQuery);
+
+const searchesults=document.querySelector(".search-results");
+searchesults.textContent=searchQuery;
+
+
+async function searched() {
+try{
+const response=await fetch(`https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`,{
+
+method:"GET",
+
+
+headers:{
+"Content-Type":"application.json",
+}
+
+})
+
+if (!response.ok) {
+    throw new Error(`Error:${response.status}`);
+}
+
+const data= await response.json();
+
+const artists = data.forEach((arti)=> {
+    const artist=document.createElement("div");
+    artist.classList.add("card")
+      artist.innerHtml=`
+  <img src="${arti.img}" class="card-img" alt="${arti.name}">
+  <div class="card-img-overlay">
+    <a class="card-text">${arti.artist}</a>
+  </div>
+`
+
+});
+}
+catch(err){
+
+console.log(err.message);
+
+
+}
 
 
 
 
+    
+}
 
-
-
-
-
-// <div class="card text-bg-dark">
-//   <img src="..." class="card-img" alt="...">
-//   <div class="card-img-overlay">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-//     <p class="card-text"><small>Last updated 3 mins ago</small></p>
-//   </div>
+// artist.innerHtml=`
+// <img src="${arti.img}" class="card-img" alt="${arti.name}">
+// <div class="card-img-overlay">
+//   <h5 class="card-title">Card title${song.name}</h5>
+//   <p class="card-text">${arti.artist}</p>
 // </div>
