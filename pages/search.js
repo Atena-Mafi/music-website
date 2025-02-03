@@ -59,8 +59,10 @@ searchesults.textContent=searchQuery;
 
 async function searched() {
 try{
- 
-const response=await fetch(`https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`,{
+    const proxyUrl = "https://api.allorigins.win/raw?url=";
+const deezerApiUrl = `https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=12`;
+
+const response=await fetch(proxyUrl + encodeURIComponent(deezerApiUrl),{
 
 method:"GET",
 headers:{
