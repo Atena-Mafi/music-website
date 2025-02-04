@@ -113,7 +113,7 @@ async function searchedArtists() {
         
         const data= await response.json();
         return data.results;
-        
+       
         }
         catch(err){
         console.log(err.message);
@@ -164,10 +164,10 @@ if (albums) {
     albums.forEach(item => {
     const albumCard=document.createElement("div");
     albumCard.classList.add("card");
-    albumCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.album_name}">
+    albumCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
     <div class="card-img-overlay">
-    <a class="card-text">${item.album_name}</a>
-    <a class="card-text2 ">${item.artist ? item.artist.name : "Unknown Artist"}</a>
+    <a class="card-text">${item.name}</a>
+    <a class="card-text2 ">${item.artist_name}</a>
     </div>
     `;
     albumsContainer.append(albumCard);
