@@ -241,16 +241,16 @@ background-color:#0d0d0d;
     .show-result{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items:flex-start;
         flex-direction: column;
 
-        gap: 20px;
+        gap: 40px;
         width: 100%;
     }
 
 
 .artists-container{
-height: 500px;
+min-height:10px;
 width: 100%;
 display: flex;
 justify-content: center;
@@ -264,7 +264,7 @@ flex-wrap: wrap;
 
 
 .albums-container{
-    height: 500px;
+    min-height: 10px;
     width: 100%;
    
     display: flex;
@@ -286,6 +286,8 @@ flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: 25px;
     margin-bottom: 25px;
+    min-height: 10px;
+    width: 100%;
 }
 
 
@@ -335,14 +337,22 @@ filter: brightness(0.7);
     .card-text{
 
         position: absolute;
-         bottom: 30px;
+         bottom: 10px;
         left: 10px;
         color: #ffffff;
-        font-weight: 500;
+        font-weight: 400;
         text-align: left;
         text-decoration: underline;
+        text-wrap: wrap;
+        padding: 8px;
 
     }
+
+    .card-text3{
+
+        margin-left: 14px;
+    }
+
 
     .artists-container .card-text{
 
@@ -365,10 +375,56 @@ filter: brightness(0.7);
        text-decoration: underline;
     }
 
+ 
+
+
     .ard-img-overlay{
-       justify-content: flex-start;
+       justify-content:center;
       align-items: center;
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
+
+
+
+
+
+
+
+
+
+
+    .card {
+       padding: 5px;
+        color:#b8a48e;
+        text-align: left;
+        background-color: #0d0d0d;
+     
+        
+       }
+     
+     
+     
+       .card{
+     
+         position: relative;
+       }
+     
+     
+     
+       .bi-play-circle{
+         font-size: 100px;
+        top:10%;
+        left:25%;
+         position: absolute;
+         color: #0d0d0d;
+         opacity: 0;
+       }
+   
+     
+     
+        .bi-play-circle:hover{
+       
+         opacity:1;
+       }

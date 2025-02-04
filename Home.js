@@ -158,4 +158,19 @@ async function  popularSongs() {
 
 popularSongs();
 
+const selectedGenre=document.querySelectorAll(".small-box");
+
+selectedGenre.forEach((box)=>{
+
+
+  box.addEventListener("click",(e)=>{
+    const genre=e.target.textContent.trim();
+    
+    window.location.href(`tracks.html?genre=${genre}`);
+    
+    });
+    
+  
+})
+
 

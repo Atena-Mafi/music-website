@@ -37,7 +37,7 @@ closeSearchBtn.addEventListener("click",(e)=>{
 
 searchingInput.addEventListener("keypress",(e)=>{
 
-if(e.key==="Enter"){
+if(e.key === "Enter" && searchingInput.value.trim() !== ""){
   searchBtn.click();
 
 }
@@ -123,6 +123,14 @@ async function searchedArtists() {
         
 
 async function displayResults() {
+
+        if (!searchQuery) {
+            searchResults.textContent = "Please enter sth.";
+            return;
+        }
+    
+
+
     const tracks = await searchedTracks();
     const artists = await searchedArtists();
     const albums = await searchedAlbums();
@@ -148,9 +156,9 @@ if(artists){
         // artists    
         const artistCard=document.createElement("div");
         artistCard.classList.add("card");
-        artistCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
+        artistCard.innerHTML=`<img src="${item.image}" class="card-img" alt="${item.name}" onerror="this.onerror=null; this.src='https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg';">
         <div class="card-img-overlay">
-          <a class="card-text">${item.name}</a>
+          <a class="card-text card-text3">${item.name}</a>
         </div>
         `;
         artistsContainer.append(artistCard);
@@ -164,10 +172,11 @@ if (albums) {
     albums.forEach(item => {
     const albumCard=document.createElement("div");
     albumCard.classList.add("card");
-    albumCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
+    albumCard.innerHTML=`<img src="${item.image}" class="card-img" alt="${item.name}   onerror="this.onerror=null; this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKWUZ3pUujDEPuQqgOaYWfbua4BqicVHg-w&s';">
     <div class="card-img-overlay">
     <a class="card-text">${item.name}</a>
-    <a class="card-text2 ">${item.artist_name}</a>
+    <a class="card-text2 ">${item.artist_name ? item.artist_name : "Unknown Artist"}</a>
+    <i class="bi bi-play-circle"></i>
     </div>
     `;
     albumsContainer.append(albumCard);
@@ -180,9 +189,10 @@ if (tracks) {
     tracks.forEach(item => {
     const trackCard=document.createElement("div");
    trackCard.classList.add("card");
-   trackCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
+   trackCard.innerHTML=`<img src="${item.image}" class="card-img" alt="${item.name}"   onerror="this.onerror=null; this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKWUZ3pUujDEPuQqgOaYWfbua4BqicVHg-w&s';">
     <div class="card-img-overlay">
-      <a class="card-text">${item.artist ? item.artist.name : "Unknown Artist"}</a>
+      <a class="card-text">${item.name}</a>
+      <i class="bi bi-play-circle"></i>
     </div>
     `;
     tracksContainer.append(trackCard);
