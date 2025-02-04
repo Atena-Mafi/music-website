@@ -46,12 +46,15 @@ searchingInput.addEventListener("keypress",(e)=>{
 
 const urlParams=new URLSearchParams(window.location.search);
 const genre=urlParams.get("genre");
+console.log("Selected genre:", genre);
 
 const cardsContainer=document.querySelector(".cards-container");
 async function musicGenre() {
 
     try{
-const response=await fetch(`https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&tag=${genre}&limit=20`)
+        const proxy = "https://cors-anywhere.herokuapp.com/";
+        const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&tag=${genre}&limit=20`;
+        const response = await fetch(proxy + apiUrl);
 
 if(!response.ok){
 
@@ -64,7 +67,7 @@ const results=data.results;
 results.forEach(track => {
     const card=document.createElement("div");
     card.classList.add("card", "text-bg-dark");
-    card.innerHTML=` <img src="${track.image}" class="card-img" alt="${track.name}">
+    card.innerHTML=` <img src="${track.image}" class="card-img" alt="${track.name}"   onerror="this.onerror=null; this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKWUZ3pUujDEPuQqgOaYWfbua4BqicVHg-w&s';">
   <div class="card-img-overlay">
     <h5 class="card-title">${track.name}</h5>
     <a class="card-text"><small>${track.artist_name}</small></a>
