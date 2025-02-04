@@ -53,13 +53,13 @@ if(e.key==="Enter"){
 const urlParams=new URLSearchParams(window.location.search);
 const searchQuery=urlParams.get("query");
 
-const searchesults=document.querySelector(".search-results");
-searchesults.textContent=searchQuery;
+const searchResults=document.querySelector(".search-results");
+searchResults.textContent=searchQuery;
 
 
 async function searched() {
 try{
-    const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&search=${encodeURIComponent(searchQuery)}`;
+    const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&namesearch=${encodeURIComponent(searchQuery)}`;
     const response = await fetch(apiUrl);
 
 if (!response.ok) {
@@ -83,8 +83,8 @@ async function displayResults() {
 const results=await searched();
 
 if(!results || results.length===0){
-    searchesults.textContent="Sorry nothing found."
-
+    searchResults.textContent="Sorry nothing found.";
+return
 }
 
 
@@ -108,9 +108,9 @@ if (!artists.has(item.artist_id)) {
     
 const artistCard=document.createElement("div");
 artistCard.classList.add("card");
-artistCard.innerHTML=`<img src="${item.image || `fallback-image.jpg`}" class="card-img" alt="${item.artist_name}">
+artistCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.artist_name}">
 <div class="card-img-overlay">
-  <a class="card-text">${item.artist.name}</a>
+  <a class="card-text">${item.artist_name}</a>
 </div>
 `;
 artistsContainer.append(artistCard);
@@ -123,7 +123,7 @@ if (!albums.has(item.album_id)) {
     
     const albumCard=document.createElement("div");
     albumCard.classList.add("card");
-    albumCard.innerHTML=`<img src="${item.album_image || `fallback-image.jpg`}" class="card-img" alt="${item.album_name}">
+    albumCard.innerHTML=`<img src="${item.album_image ? item.album_image : 'fallback-image.jpg'}" class="card-img" alt="${item.album_name}">
     <div class="card-img-overlay">
     <a class="card-text">${item.album_name}</a>
     <a class="card-text">${item.artist_name}</a>
@@ -139,7 +139,7 @@ if (!tracks.has(item.id)) {
     
     const trackCard=document.createElement("div");
    trackCard.classList.add("card");
-   trackCard.innerHTML=`<img src="${item.image ||`fallback-image.jpg`}" class="card-img" alt="${item.name}">
+   trackCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
     <div class="card-img-overlay">
       <a class="card-text">${item.artist_name}</a>
     </div>
