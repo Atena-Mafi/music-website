@@ -166,7 +166,7 @@ selectedGenre.forEach((box)=>{
   box.addEventListener("click",(e)=>{
     const genre=e.target.textContent.trim();
     
-    window.location.href(`tracks.html?genre=${genre}`);
+    window.location.href=`pages/tracks.html?genre=${genre}`;
     
     });
     
