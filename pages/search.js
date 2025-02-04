@@ -67,7 +67,7 @@ if (!response.ok) {
 }
 
 const data= await response.json();
-return data.data;
+return data.results;
 
 }
 catch(err){
@@ -104,49 +104,48 @@ const tracks=new Map();
 
 results.forEach(item => {
 // artists    
-if (!artists.has(item.artist.id)) {
+if (!artists.has(item.artist_id)) {
     
 const artistCard=document.createElement("div");
 artistCard.classList.add("card");
-artistCard.innerHTML=`<img src="${item.artist.picture_medium}" class="card-img" alt="${item.artist.name}">
+artistCard.innerHTML=`<img src="${item.image || `fallback-image.jpg`}" class="card-img" alt="${item.artist_name}">
 <div class="card-img-overlay">
   <a class="card-text">${item.artist.name}</a>
 </div>
 `;
 artistsContainer.append(artistCard);
-artists.set(item.artist.id,true);
+artists.set(item.artist_id,true);
 }
 
 
 // albums   
-if (!albums.has(item.album.id)) {
+if (!albums.has(item.album_id)) {
     
     const albumCard=document.createElement("div");
     albumCard.classList.add("card");
-    albumCard.innerHTML=`<img src="${item.album.cover_medium}" class="card-img" alt="${item.album.title}">
+    albumCard.innerHTML=`<img src="${item.album_image || `fallback-image.jpg`}" class="card-img" alt="${item.album_name}">
     <div class="card-img-overlay">
-    <a class="card-text">${item.album.title}</a>
-    <a class="card-text">${item.artist.name}</a>
+    <a class="card-text">${item.album_name}</a>
+    <a class="card-text">${item.artist_name}</a>
     </div>
     `;
     albumsContainer.append(albumCard);
-   albums.set(item.album.id,true);
+   albums.set(item.album_id,true);
     }
 
-    
 
     // tracks
-if (!tracks.has(item.track.id)) {
+if (!tracks.has(item.id)) {
     
     const trackCard=document.createElement("div");
    trackCard.classList.add("card");
-   trackCard.innerHTML=`<img src="${item.album.cover_medium}" class="card-img" alt="${item.title}">
+   trackCard.innerHTML=`<img src="${item.image ||`fallback-image.jpg`}" class="card-img" alt="${item.name}">
     <div class="card-img-overlay">
-      <a class="card-text">${item.artist.name}</a>
+      <a class="card-text">${item.artist_name}</a>
     </div>
     `;
     tracksContainer.append(trackCard);
-    tracks.set(item.track.id,true);
+    tracks.set(item.id,true);
     }
 });
 
