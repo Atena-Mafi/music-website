@@ -57,7 +57,7 @@ const searchResults=document.querySelector(".search-results");
 searchResults.textContent=searchQuery;
 
 
-async function searched() {
+async function searchedTracks() {
 try{
     const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&namesearch=${encodeURIComponent(searchQuery)}`;
     const response = await fetch(apiUrl);
@@ -79,13 +79,58 @@ return null;
 
 
 
-async function displayResults() {
-const results=await searched();
 
-if(!results || results.length===0){
-    searchResults.textContent="Sorry nothing found.";
-return
-}
+async function searchedArtists() {
+    try{
+        const apiUrl = `https://api.jamendo.com/v3.0/artists/?client_id=8cb724ba&format=json&name=${encodeURIComponent(searchQuery)}`;
+        const response = await fetch(apiUrl);
+    
+    if (!response.ok) {
+        throw new Error(`Error:${response.status}`);
+    }
+    
+    const data= await response.json();
+    return data.results;
+    
+    }
+    catch(err){
+    console.log(err.message);
+    }  
+    return null;  
+    }
+    
+
+
+
+    async function searchedAlbums() {
+        try{
+            const apiUrl = `https://api.jamendo.com/v3.0/albums/?client_id=8cb724ba&format=json&name=${encodeURIComponent(searchQuery)}`;
+            const response = await fetch(apiUrl);
+        
+        if (!response.ok) {
+            throw new Error(`Error:${response.status}`);
+        }
+        
+        const data= await response.json();
+        return data.results;
+        
+        }
+        catch(err){
+        console.log(err.message);
+        }  
+        return null;  
+        }
+        
+
+async function displayResults() {
+    const tracks = await searchedTracks();
+    const artists = await searchedArtists();
+    const albums = await searchedAlbums();
+
+    if ((!tracks || tracks.length === 0) && (!artists || artists.length === 0) && (!albums || albums.length === 0)) {
+        searchResults.textContent = "Sorry, nothing found.";
+        return;
+    }
 
 
 const artistsContainer=document.querySelector(".artists-container");
@@ -97,46 +142,45 @@ const tracksContainer=document.querySelector(".tracks-container");
  albumsContainer.innerHTML="";
 tracksContainer.innerHTML="";
 
- const artists=new Map();
-const albums=new Map();
-const tracks=new Map();
+if(artists){
 
+    artists.forEach(item => {
+        // artists    
+        const artistCard=document.createElement("div");
+        artistCard.classList.add("card");
+        artistCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.artist_name}">
+        <div class="card-img-overlay">
+          <a class="card-text">${item.artist_name}</a>
+        </div>
+        `;
+        artistsContainer.append(artistCard);
+    });
 
-results.forEach(item => {
-// artists    
-if (!artists.has(item.artist_id)) {
-    
-const artistCard=document.createElement("div");
-artistCard.classList.add("card");
-artistCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.artist_name}">
-<div class="card-img-overlay">
-  <a class="card-text">${item.artist_name}</a>
-</div>
-`;
-artistsContainer.append(artistCard);
-artists.set(item.artist_id,true);
 }
 
 
+
+
+
 // albums   
-if (!albums.has(item.album_id)) {
-    
+if (albums) {
+    albums.forEach(item => {
     const albumCard=document.createElement("div");
     albumCard.classList.add("card");
     albumCard.innerHTML=`<img src="${item.album_image ? item.album_image : 'fallback-image.jpg'}" class="card-img" alt="${item.album_name}">
     <div class="card-img-overlay">
     <a class="card-text">${item.album_name}</a>
-    <a class="card-text">${item.artist_name}</a>
+    <a class="card-text2 ">${item.artist_name}</a>
     </div>
     `;
     albumsContainer.append(albumCard);
-   albums.set(item.album_id,true);
-    }
-
+ 
+    })
+}
 
     // tracks
-if (!tracks.has(item.id)) {
-    
+if (tracks) {
+    tracks.forEach(item => {
     const trackCard=document.createElement("div");
    trackCard.classList.add("card");
    trackCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
@@ -145,9 +189,9 @@ if (!tracks.has(item.id)) {
     </div>
     `;
     tracksContainer.append(trackCard);
-    tracks.set(item.id,true);
-    }
-});
+    })
+    };
+
 
 }
 

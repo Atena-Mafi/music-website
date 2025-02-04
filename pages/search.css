@@ -243,7 +243,7 @@ background-color:#0d0d0d;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: chocolate;
+
         gap: 20px;
         width: 100%;
     }
@@ -252,8 +252,13 @@ background-color:#0d0d0d;
 .artists-container{
 height: 500px;
 width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-wrap: wrap;
 
-    background-color: aqua;
+
 }
 
 
@@ -261,27 +266,109 @@ width: 100%;
 .albums-container{
     height: 500px;
     width: 100%;
-    background-color: darkgoldenrod;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 
 
-.tracks-container a{
-  margin: 2px;
+
+
+.tracks-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
+.artists-container  .card{
+border-radius: 50%;
 
-.artists-container a{
-    margin: 2px;
+}
+
+.tracks-container img{
+    width: 200px;
+    height:200px;
+position: relative;
+filter: brightness(0.7);
     }
+
+    .albums-container img{
+        width: 200px;
+            height:200px;
+            position: relative;
+            filter: brightness(0.7);
+         }
+
+
+         .artists-container img{
+            width: 200px;
+            height:200px ;
+            position: relative;
+            filter: brightness(0.7);
+            border-radius: 50%;
+         
+             }
+
+
+
     
-    
-    
-    .albums-container a{
+    .title{
         margin: 2px;
+          font-weight: 500;
+       text-align: left;
+       text-decoration: underline;
+       color:#b8a48e;
+       font-size: larger;
     }
     
     
     
-    
+    .card-text{
+
+        position: absolute;
+         bottom: 30px;
+        left: 10px;
+        color: #ffffff;
+        font-weight: 500;
+        text-align: left;
+        text-decoration: underline;
+
+    }
+
+    .artists-container .card-text{
+
+        bottom: 50px;
+        left: 20px;
+
+    }
+
+
+
+
+
+    .card-text2{
+        position: absolute;
+        bottom: 10px;
+       left: 10px;
+       color: #ffffff;
+       font-weight: 500;
+       text-align: left;
+       text-decoration: underline;
+    }
+
+    .ard-img-overlay{
+       justify-content: flex-start;
+      align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
