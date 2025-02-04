@@ -52,10 +52,12 @@ const cardsContainer=document.querySelector(".cards-container");
 async function musicGenre() {
 
     try{
-        const proxy = "https://cors-anywhere.herokuapp.com/";
+        const proxy = "https://corsproxy.io/?";
         const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&tag=${genre}&limit=20`;
-        const response = await fetch(proxy + apiUrl);
-
+        const response = await fetch(proxy + encodeURIComponent(apiUrl));
+        
+        
+        
 if(!response.ok){
 
     throw new Error(`Error: ${response.status}`);
