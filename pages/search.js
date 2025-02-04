@@ -148,9 +148,9 @@ if(artists){
         // artists    
         const artistCard=document.createElement("div");
         artistCard.classList.add("card");
-        artistCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.artist_name}">
+        artistCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
         <div class="card-img-overlay">
-          <a class="card-text">${item.artist_name}</a>
+          <a class="card-text">${item.name}</a>
         </div>
         `;
         artistsContainer.append(artistCard);
@@ -159,18 +159,15 @@ if(artists){
 }
 
 
-
-
-
 // albums   
 if (albums) {
     albums.forEach(item => {
     const albumCard=document.createElement("div");
     albumCard.classList.add("card");
-    albumCard.innerHTML=`<img src="${item.album_image ? item.album_image : 'fallback-image.jpg'}" class="card-img" alt="${item.album_name}">
+    albumCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.album_name}">
     <div class="card-img-overlay">
     <a class="card-text">${item.album_name}</a>
-    <a class="card-text2 ">${item.artist_name}</a>
+    <a class="card-text2 ">${item.artist ? item.artist.name : "Unknown Artist"}</a>
     </div>
     `;
     albumsContainer.append(albumCard);
@@ -185,7 +182,7 @@ if (tracks) {
    trackCard.classList.add("card");
    trackCard.innerHTML=`<img src="${item.image ? item.image : 'fallback-image.jpg'}" class="card-img" alt="${item.name}">
     <div class="card-img-overlay">
-      <a class="card-text">${item.artist_name}</a>
+      <a class="card-text">${item.artist ? item.artist.name : "Unknown Artist"}</a>
     </div>
     `;
     tracksContainer.append(trackCard);
@@ -198,7 +195,26 @@ if (tracks) {
 
 
 
-displayResults();
+document.addEventListener("DOMContentLoaded", displayResults);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
