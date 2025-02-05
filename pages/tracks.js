@@ -53,7 +53,7 @@ async function musicGenre() {
 
     try{
         const proxy = "https://corsproxy.io/?";
-        const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&genre=${genre}&limit=20`;
+        const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&tags=${genre}&limit=20`;
         const response = await fetch(proxy + encodeURIComponent(apiUrl));
         
         
