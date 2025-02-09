@@ -52,32 +52,29 @@ const cardsContainer=document.querySelector(".cards-container");
 async function musicGenre() {
 
     try{
-        const proxy = "https://corsproxy.io/?";
         const apiUrl = `https://api.jamendo.com/v3.0/tracks/?client_id=8cb724ba&format=json&tags=${genre}&limit=20`;
-        const response = await fetch(proxy + encodeURIComponent(apiUrl));
-        
-        
-        
+        const response = await fetch(apiUrl);
+      
 if(!response.ok){
 
     throw new Error(`Error: ${response.status}`);
 }
 
 const data=await response.json();
-
+console.log("API response:", data);
 const results=data.results;
 results.forEach(track => {
     const card=document.createElement("div");
-    card.classList.add("card", "text-bg-dark");
-    card.innerHTML=` <img src="${track.image}" class="card-img" alt="${track.name}"   onerror="this.onerror=null; this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKWUZ3pUujDEPuQqgOaYWfbua4BqicVHg-w&s';">
-  <div class="card-img-overlay">
+    card.classList.add("card");
+    card.innerHTML=` <img src="${track.image}" class="card-img-top" alt="${track.name}"   onerror="'https://www.jamendo.com/assets/images/default_track.png';">
+  <div class="card-body">
     <h5 class="card-title">${track.name}</h5>
     <a class="card-text"><small>${track.artist_name}</small></a>
+     <i class="bi bi-play-circle"></i>
   </div>`
 
   cardsContainer.append(card);
 });
-
 
 
     }

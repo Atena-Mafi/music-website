@@ -130,6 +130,96 @@ background-color:#0d0d0d;
 
 
 
+/* para-hero */
+
+.para-hero{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b8a48e;
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 40px;
+   }
+  
+  
+   .para-hero::after{
+    background-color: #b8a48e;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    width: 2%;
+    height: 2px;
+    margin: 0 auto;
+   }
+  
+  
+  
+   /* para-hero */
+
+
+
+
+/* boxes starts */
+
+
+box-container{
+
+    margin-top: 40px;
+     }
+    
+
+
+
+
+.boxes{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+     align-items: center;
+ 
+     color: #ebebeb;
+     font-weight:700;
+     margin-top: 40px;
+     gap: 30px;
+     width: 100vw;
+}
+
+
+.box1{
+    background:url("https://lastfm.freetls.fastly.net/i/u/770x0/928afdd8c36d15650ce8a468b8a28591.jpg#928afdd8c36d15650ce8a468b8a28591") no-repeat center/cover;
+ filter:opacity(0.8);
+ position: relative;
+ text-align:left ;
+ display: flex;
+ flex-direction: column;
+ justify-content:flex-end;
+ align-items: center;
+ height: 600px;
+ width: 600px;
+ gap: 20px;
+padding: 20px;
+
+}
+
+
+.box1::after{
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:80%;
+    background:linear-gradient(to top ,rgba(51, 197, 255, 0.6),transparent);
+}
+.box1 *{
+    color: white;
+    z-index: 5;
+}
 
 
 
@@ -138,16 +228,183 @@ background-color:#0d0d0d;
 
 
 
+.box2{
+    background:url("https://lastfm.freetls.fastly.net/i/u/770x0/7101d7315a8c272ac4ac29776a2319fd.jpg#7101d7315a8c272ac4ac29776a2319fd") no-repeat center/cover;
+ filter:opacity(0.8);
+ position: relative;
+ text-align:left ;
+ display: flex;
+ flex-direction: column;
+ justify-content:flex-end;
+ height: 600px;
+ width: 600px;
+ gap: 20px;
+ align-items:center;
+ padding: 20px;
+
+ z-index: 2;
+
+}
+
+.box2::after{
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:80%;
+    background:linear-gradient(to top ,rgba(71, 40, 40, 0.6),transparent);
+}
+.box2 *{
+    color: white;
+    z-index: 5;
+}
+
+
+
+ .box2:hover{
+
+
+    filter: opacity(0.6);
+}
+
+
+
+.box1:hover{
+
+
+    filter: opacity(0.6);
+}
 
 
 
 
+.small-boxs{
+    display: flex;
+ flex-direction: row;
+ justify-content:space-between;
+gap: 60px;
+}
+.sbox {
+ font-size:13px;
+    display: flex;
+ flex-direction:row;
+ justify-content:space-evenly;
+  gap: 20px;
+}
+
+.details{
+     gap: 0;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 5px;
+}
+
+.sbox img{
+    height:100px;
+    width: 100px;
+   
+
+
+}
+
+
+/* boxes ends */
+.searchbox-music{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  
+    margin-bottom: 70px;
+        margin-top: 30px;
+        color: #b8a48e;
+        background: url("https://www.last.fm/static/images/music-landing/albums_bg_1E6875.8cb84eb88196.jpg") no-repeat center/cover ;
+        filter: brightness(0.9);
+        padding: 20px;
+  }
+
+
+
+.searchbox{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+margin-bottom: 30px;
+}
+
+
+
+.searchbox input{
+width: 350px;
+color: #b8a48e;
+
+}
 
 
 
 
+/* 
+Artists */
 
 
+.cards{
+    min-height:10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 90px;
+    }
+    
+
+.card{
+    background-color: #0d0d0d;
+    text-wrap: wrap;
+    color: #b8a48e;
+    position: relative;
+}
+
+
+
+    .card img{
+        width: 220px;
+        height:220px ;
+        position: relative;
+        border-radius: 50%;
+        filter: opacity(0.8);
+         }
+
+
+         .card-text{
+
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            color: #ffffff;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: underline;
+            text-wrap: wrap;
+            padding: 8px;
+         }
+
+
+
+         .card:hover img {
+            filter: opacity(0.6);
+          
+          }
+/* Artists */
 
 
 

@@ -337,7 +337,7 @@ filter: brightness(0.7);
     .card-text{
 
         position: absolute;
-         bottom: 10px;
+         bottom: 25px;
         left: 10px;
         color: #ffffff;
         font-weight: 400;
