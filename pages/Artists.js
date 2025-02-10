@@ -69,9 +69,7 @@ const cards=document.querySelector(".cards");
 
 async function artists() {
     try{
-
-const response=await fetch("https://api.jamendo.com/v3.0/artists/?client_id=8cb724ba&width=800&format=json&limit=12");
-
+        const response = await fetch(`https://corsproxy.io/?url=https://api.deezer.com/chart`);
   if(!response.ok){
 
     throw new Error(`Error:${response.status}`);
@@ -79,18 +77,19 @@ const response=await fetch("https://api.jamendo.com/v3.0/artists/?client_id=8cb7
 
   const data=await response.json();
 
-  const artists=data.results;
+  const artists= data.artists.data;
 
 
   artists.forEach(item => {
     const card=document.createElement("div");
     card.classList.add("card");
-    card.innerHTML=`
-    <img src="${item.image}" class="card-img" alt="${item.name}" onerror="this.onerror=null; this.src='https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg';">
+    const imageUrl = item.picture_medium || 'https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg';
+      card.innerHTML = `
+        <img src="${imageUrl}" alt="${item.name}">
         <div class="card-img-overlay">
           <a class="card-text">${item.name}</a>
         </div>
-        `;
+      `;
         cards.append(card);
 
 

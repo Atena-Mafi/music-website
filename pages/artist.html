@@ -114,6 +114,82 @@
       </nav>
     </header>
     <!-- header ends -->
+
+    <main>
+      <div class="artists-container container-fluid">
+        <div class="card"></div>
+      </div>
+
+      <!-- biography -->
+      <div class="box-container container-fluid">
+        <div class="container biographyContainer">
+          <h5 class="display-4 biographyTitle"><small>Biography:</small></h5>
+          <p class="biography"></p>
+        </div>
+      </div>
+      <!-- biography  ends -->
+      <div class="para-hero">
+        <p>Top tracks</p>
+      </div>
+      <!-- artist songs -->
+      <div class="artistTrackContainer container-fluid"></div>
+      <!-- artist songs -->
+
+      <!-- Music Player Bar  starts -->
+
+      <div class="music-player container-fluid d-none">
+        <!-- music-Info -->
+        <div class="music-Info">
+          <div class="picture">
+            <img />
+          </div>
+
+          <div class="text-Info">
+            <h5 class="title"></h5>
+            <p class="singer-name"></p>
+          </div>
+        </div>
+        <!-- music-Info -->
+
+        <!-- music-controlers -->
+        <div class="music-controlers">
+          <div class="buttons">
+            <i class="bi bi-shuffle"></i>
+            <i class="bi bi-skip-backward-fill"></i>
+            <i class="bi bi-play-fill play"></i>
+
+            <i class="bi bi-fast-forward-fill"></i>
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+
+          <div class="progress-bar">
+            <input type="range" id="progress-bar" min="0" max="100" value="0" />
+          </div>
+        </div>
+
+        <!-- music-controlers ends -->
+
+        <!-- music volum-controler starts -->
+        <div class="volum-controler">
+          <i class="volumeSign bi bi-volume-up-fill"></i>
+          <!-- <i class="bi bi-volume-mute-fill"></i> -->
+          <input
+            type="range"
+            id="volum-controler"
+            min="0"
+            max="100"
+            value="100"
+          />
+        </div>
+
+        <!-- music volum-controler ends -->
+
+        <audio class="audioTrack"></audio>
+      </div>
+
+      <!-- Music Player Bar  ends -->
+    </main>
+
     <!-- footer starts -->
 
     <footer>
