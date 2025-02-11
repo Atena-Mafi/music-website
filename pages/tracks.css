@@ -314,3 +314,293 @@ background-color:#0d0d0d;
     
     
     /* foooter */
+
+
+
+
+
+
+
+
+
+    
+@media(max-width:768px){
+
+    .nav-item a{
+  
+      color: #b8a48e !important ;
+    }
+  
+  
+  
+    .navbar{
+      background-color: #b8a48e ;
+      height: 4.5rem;
+      display: flex;
+      align-items: center;
+        z-index: 200;
+        margin-bottom: 40px;
+        }
+      
+     
+        
+        #searchForm{
+        margin-top: 10px;
+        width: 90%;
+         height: 4rem;
+        
+       
+        }
+     
+     
+        #searching{
+     
+         background-color:#b8a48e;
+         border: #b8a48e solid;
+         border-radius: 0%;
+         outline: none;
+         box-shadow: none;
+       
+        }
+     
+     
+     
+        .search-btn{
+          width: 60px;
+          background-color:  #b8a48e;
+          border-radius: 0%;
+          color: #0d0d0d;
+          height: 4rem;
+          margin-right:0px;
+        }
+     
+        .box-buttons{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+        }
+     
+     
+      #closeSearch{
+       width:30%;
+       background-color:  #b8a48e;
+       border-radius: 0%;
+       color:#0d0d0d;
+       height: 4rem;
+       outline: none;
+       box-shadow: none;
+       border: none;
+        margin-right: 15px;
+       font-size:20px;
+  
+       }
+     
+  
+  
+       .navbar-collapse.show{
+  
+        background-color:#0d0d0d ;
+       }
+  
+  
+
+
+/* cards starts */
+
+
+.cards-container{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 30px;
+    margin-bottom: 80px;
+     margin-top:100px;
+   }
+ 
+ 
+ 
+ 
+ 
+ 
+   .card {
+ 
+     width: 100px;
+      height:210px;
+     color:#b8a48e;
+     text-align: left;
+     background-color: #0d0d0d;
+  
+     
+    }
+  
+  
+  
+    .card-img-top{
+  
+      position: relative;
+    }
+  
+  
+  
+    .bi-play-circle{
+      font-size: 100px;
+     top:10%;
+     left:25%;
+      position: absolute;
+      color: #0d0d0d;
+      opacity: 0;
+    }
+  
+  
+    .card:hover {
+  
+      padding: 2px;
+      
+     }
+  
+  
+  
+     .bi-play-circle:hover{
+    
+      opacity:1;
+    }
+  
+  
+    .card-body h5{
+   font-size:16px;
+   font-weight: 700;
+    }
+  
+  
+    .card-body p{
+      font-size:14px;
+     
+       }
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* cards ends */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+.footer{
+
+    gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top: hwb(31 56% 28% / 0.267) solid 0.5px;
+      margin-top: 20px;
+    }
+    
+    
+    .footer-items{
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    flex-direction: row;
+      width: 100%;
+      height: 240px;
+      gap: 0px;
+      margin-left: 0px;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    
+    
+    .footer-item{
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      width: 110px;
+      height: 120px;
+      color: #b8a48e;
+      gap: 12px;
+    font-size: 10px;
+      margin-top: 5px;
+      line-height:10px;
+      text-wrap: wrap;
+    margin-bottom: 0;
+    padding: 0;
+    }
+    
+    
+    
+    .footer-item p:hover{
+    
+       font-size: smaller;
+      }
+    
+    
+    .footer-item p{
+      font-weight: 0;
+     
+      margin-bottom: 0;
+    }
+    
+    .copyright{
+      color: #b8a48e;
+      font-weight: 100;
+      margin-bottom: 20px;
+      font-size: 8px;
+    }
+    
+    
+    
+    
+    /* foooter */
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+    }  

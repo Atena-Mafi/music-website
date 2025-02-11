@@ -657,4 +657,461 @@ color: #b8a48e;
      }
 
 
+
+
+
+
+
+
+ /* boxes */
+
+
+ .boxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+  padding: 5px;
+
+ }
+
+
+
+ .tracksList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+ }
+
+
+ .right-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  gap: 20px;
+ }
+
+ .left-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  gap: 40px;
+  margin-top: 40px;
+ }
+
+
+
+
+
+ .card{
+
+  width:280px;
+  height: 70px;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  outline: none;
+  border-bottom: #b8a48e7c solid 0.5px ;
+  background-color: #0d0d0d;
+  border-radius: 0%;
+ 
+ }
+
+
+ .rate{
+ color: #b8a48e;
+  margin-right: 16px;
+ }
+
+.photo{
+  margin-right:22px;
+}
+
+
+
+.photo:hover{
+filter: brightness(0.6);
+}
+
+
+
+
+ .photo img{
+  
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+  
+ }
+
+ .artistPhoto{
+  border-radius: 50%;
+ }
+
+
+
+ .artistPhoto:hover{
+  filter: brightness(0.6);
+ }
+
+
+
+
+ .artistPhoto img{
+
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+  border-radius: 50%;
+
+ }
+
+
+
+ .info{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+line-height: 12px;
+font-size: 14px;
+
+text-align: left;
+ }
+
+
+.top-right{
+  width: 300px;
+  height: 300px;
+ display: flex;
+  flex-direction:row;
+  align-items:flex-end;
+  justify-content: flex-start;
+position: relative;
+filter: brightness(0.6);
+box-shadow: 5px 5px 15px 5px #000000;
+}
+
+
+
+
+
+.top-right:hover{
+
+  box-shadow: 5px 5px 15px 5px#b8a48e;
+}
+
+
+
+
+
+
+
+.top-right::after{
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color:#fdfdfd1e;
+}
+.top-right img{
+margin-left: 30px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 7px;
+  filter: brightness(0.4);
+}
+
+
+.trackInfoTop{
+width: 100%;
+color:#0d0d0d;
+font-size: 25px;
+font-weight: 700;
+  display: flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+ margin-left: 5px;
+}
+
+.top-left{
+  width: 300px;
+  height: 300px;
+ display: flex;
+  flex-direction:row;
+  align-items:flex-end;
+  justify-content: flex-start;
+position: relative;
+filter: brightness(0.6);
+box-shadow: 5px 5px 15px 5px #000000;
+
+}
+
+
+
+
+.top-left:hover{
+
+  box-shadow: 5px 5px 15px 5px#b8a48e;
+
+}
+
+
+
+
+
+
+
+
+
+.top-left img{
+  margin-left: 30px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 7px;
+  border-radius: 50%;
+  border: #b8a48e solid 1px;
+}
+
+.top-left::after{
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color:#fdfdfd1e;
+}
+
+
+
+.artistInfoTop{
+
+  width: 100%;
+  color: #0d0d0d;
+  font-size: 25px;
+  font-weight: 700;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+   margin-left: 7px;
+   margin-bottom: 2px;
+}
+
+
+
+
+.artistList{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+
+
+
+
+.display-6{
+
+  margin-right:200px;
+}
+
+
+
+
+
+
+
+ /* boxes */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* serch box starts */
+.searchbox-music{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 70px;
+      margin-top: 30px;
+      color: #b8a48e;
+      background: url("https://www.last.fm/static/images/music-landing/albums_bg_1E6875.8cb84eb88196.jpg") no-repeat center/cover ;
+      filter: brightness(0.9);
+      padding: 20px;
+}
+
+
+
+.searchbox{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+margin-bottom: 30px;
+
+}
+
+
+
+.searchbox input{
+width: 300px;
+color: #b8a48e;
+
+}
+
+/* serch box end */
+
+
+
+
+
+
+
+
+
+
+
+
+      
+/* footer */
+
+
+.footer{
+
+  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: hwb(31 56% 28% / 0.267) solid 0.5px;
+    margin-top: 20px;
+  }
+  
+  
+  .footer-items{
+  display: flex;
+  align-items: flex-start;
+  justify-content:flex-start;
+  flex-direction: row;
+    width: 100%;
+    height: 240px;
+    gap: 0px;
+    margin-left: 0px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  
+  
+  .footer-item{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 110px;
+    height: 120px;
+    color: #b8a48e;
+    gap: 12px;
+  font-size: 10px;
+    margin-top: 5px;
+    line-height:10px;
+    text-wrap: wrap;
+  margin-bottom: 0;
+  padding: 0;
+  }
+  
+  
+  
+  .footer-item p:hover{
+  
+     font-size: smaller;
+    }
+  
+  
+  .footer-item p{
+    font-weight: 0;
+   
+    margin-bottom: 0;
+  }
+  
+  .copyright{
+    color: #b8a48e;
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 8px;
+  }
+  
+  
+  
+  
+  /* foooter */
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
   }  
