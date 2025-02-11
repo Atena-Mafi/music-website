@@ -130,24 +130,73 @@ background-color:#0d0d0d;
 
 
 
+.all{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0px;
+    height: 600px;
+  background-color: #b8a48e;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+
+.message{
+
+    background: url("https://www.last.fm/static/images/defaults/default_header.056b1680908c.jpg") no-repeat center/cover;
+    height: 600px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+      padding-top: 90px;
+      
+}
+  
+
+/* 
+form  */
+
+
+.formContainer{
+  
+    width: 90%;
+    height: 600px;
+
+}
+
+.formSignUp{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 60px;
+   
+}
+.col-md-4{
+    width: 90%;
+
+}
+
+
+
+/* 
+.btn{
+
+    background-color: grey
+} */
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* form */
 
 
 

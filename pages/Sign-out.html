@@ -18,6 +18,8 @@
       rel="stylesheet"
     />
     <link rel="icon" href="data:," />
+
+    <link rel="stylesheet" href="./Sign-out.css" />
   </head>
   <body>
     <!-- header starts -->
@@ -113,10 +115,101 @@
     </header>
     <!-- header ends -->
 
-    <div class="container">
-      <div class=""></div>
-      <div></div>
+    <!-- form -->
+    <div class="container all">
+      <div class="container formContainer">
+        <form class="row g-3 formSignUp">
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label"
+              >First name</label
+            >
+            <input
+              type="text"
+              class="form-control name"
+              id="validationDefault01"
+              value=""
+              placeholder="Atena"
+              ;
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label"
+              >Last name:</label
+            >
+            <input
+              type="text"
+              class="form-control lastName"
+              id="validationDefault02"
+              value=""
+              placeholder="Mafi"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefaultUsername" class="form-label"
+              >Username:</label
+            >
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+              <input
+                type="text"
+                class="form-control username"
+                id="validationDefaultUsername"
+                aria-describedby="inputGroupPrepend2"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col-md-4 passwordForm">
+            <label for="validationDefaultPassword6" class="col-form-label"
+              >Password:</label
+            >
+
+            <input
+              type="password"
+              id="validationDefaultPassword6"
+              class="form-control password"
+              aria-describedby="passwordHelpInline"
+              pattern=".{8,20}"
+              ;
+              required
+              title="Password must be between 8 and 20 characters."
+              ;
+            />
+
+            <span id="passwordHelpInline" class="form-text">
+              Must be 8-20 characters long.
+            </span>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck2"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-secondary" type="submit">Submit form</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="message">
+        <h1>Music Counts. Track, Find and Rediscover Music.</h1>
+      </div>
     </div>
+
+    <!-- form  end-->
 
     <!-- footer starts -->
 
@@ -177,5 +270,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./Sign-out.js"></script>
   </body>
 </html>

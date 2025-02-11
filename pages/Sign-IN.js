@@ -45,6 +45,59 @@ if(e.key==="Enter"){
 
 
 
+// form
+
+
+const form=document.querySelector(".formSignUp");
+const usernameInput=document.querySelector("#username");
+
+const passwordInput=document.querySelector("#exampleInputPassword1");
+const btn=document.querySelector(".btn-secondary");
+
+
+async function signIn(username,password) {
+    
+try{
+
+const response=await fetch(`https://67ab5c5a5853dfff53d722ee.mockapi.io/musicWebsite`);
+if(!response.ok){
+    throw new Error(`Error:${response.status}`)
+}
+
+
+const data=await response.json();
+return data.some((user)=>user.username ===username && user.password===password);
+}
+
+catch(err){
+
+    console.log(err.message);
+    
+}
+
+}
+
+
+
+form.addEventListener("submit",async(e)=>{
+    e.preventDefault();
+const username=usernameInput.value;
+const password=passwordInput.value;
+ const checkSignIn =await  signIn(username,password);
+    if (checkSignIn) {
+        alert(`Welcome,${username}.`)
+        usernameInput.value="";
+        passwordInput.value="";
+        window.location.href="../Home.html";
+
+    }else{
+
+        alert(`Incorrect username or password.`)
+        usernameInput.value="";
+        passwordInput.value="";
+    }
+
+})
 
 
 
@@ -52,8 +105,7 @@ if(e.key==="Enter"){
 
 
 
-
-
+// form
 
 
 const navbarToggler=document.querySelector(".navbarToggler");
