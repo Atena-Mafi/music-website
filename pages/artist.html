@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./artist.css" />
+  </head>
+  <body>
+    <!-- header starts -->
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- logo starts -->
+          <a class="navbar-brand ms-4" href="../Home.html">
+            <img
+              src="../assets/music-note-sound-circle-outline-512.webp"
+              alt="Music icone"
+              width="60"
+              height="60"
+            />
+          </a>
+          <!-- logo ends -->
+
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-3">
+              <li class="nav-item">
+                <a class="nav-link active" id="searchIcon" href="#"
+                  ><i class="bi bi-search mt-5 me-3 active"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active d-flex align-items-center"
+                  aria-current="page"
+                  href="../Home.html"
+                >
+                  Home</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="./Artists.html">Artists</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./charts.html">charts</a>
+              </li>
+              <!-- <li class="nav-item Library">
+                <a class="nav-link active" href="./pages/Library.html"
+                  >Library</a
+                >
+              </li> -->
+              <!-- divider -->
+              <li class="nav-item divider"></li>
+              <!-- divider -->
+              <li class="nav-item">
+                <a class="nav-link active ms-3 Sign-In" href="./Sign-IN.html"
+                  >Sign In</a
+                >
+              </li>
+              <li class="nav-item Sign-Up">
+                <a
+                  class="nav-link active Sign-Up text-dark"
+                  href="./Sign-out.html"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+            <form id="searchForm" class="d-none d-flex">
+              <label for="searching" class="form-label"></label>
+              <input
+                class="form-control"
+                id="searching"
+                placeholder="Search for music..."
+              />
+              <div class="box-buttons">
+                <button id="closeSearch"><i class="bi bi-x-lg"></i></button>
+                <button type="submit" class="btn search-btn">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header ends -->
+
+    <main>
+      <div class="artists-container container-fluid">
+        <div class="card"></div>
+      </div>
+
+      <!-- biography -->
+      <div class="box-container container-fluid">
+        <div class="container biographyContainer">
+          <h5 class="display-4 biographyTitle"><small>Biography:</small></h5>
+          <p class="biography"></p>
+        </div>
+      </div>
+      <!-- biography  ends -->
+      <div class="para-hero">
+        <p>Top tracks</p>
+      </div>
+      <!-- artist songs -->
+      <div class="artistTrackContainer container-fluid"></div>
+      <!-- artist songs -->
+
+      <!-- Music Player Bar  starts -->
+
+      <div class="music-player container-fluid d-none">
+        <!-- music-Info -->
+        <div class="music-Info">
+          <div class="picture">
+            <img />
+          </div>
+
+          <div class="text-Info">
+            <h5 class="title"></h5>
+            <p class="singer-name"></p>
+          </div>
+        </div>
+        <!-- music-Info -->
+
+        <!-- music-controlers -->
+        <div class="music-controlers">
+          <div class="buttons">
+            <i class="bi bi-shuffle"></i>
+            <i class="bi bi-skip-backward-fill"></i>
+            <i class="bi bi-play-fill play"></i>
+
+            <i class="bi bi-fast-forward-fill"></i>
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+
+          <div class="progress-bar">
+            <input type="range" id="progress-bar" min="0" max="100" value="0" />
+          </div>
+        </div>
+
+        <!-- music-controlers ends -->
+
+        <!-- music volum-controler starts -->
+        <div class="volum-controler">
+          <i class="volumeSign bi bi-volume-up-fill"></i>
+          <!-- <i class="bi bi-volume-mute-fill"></i> -->
+          <input
+            type="range"
+            id="volum-controler"
+            min="0"
+            max="100"
+            value="100"
+          />
+        </div>
+
+        <!-- music volum-controler ends -->
+
+        <audio class="audioTrack"></audio>
+      </div>
+
+      <!-- Music Player Bar  ends -->
+    </main>
+
+    <!-- footer starts -->
+
+    <footer>
+      <div class="container footer">
+        <div class="footer-items">
+          <div class="footer-item">
+            <p>Company</p>
+            <a href="#">About Last.fm</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Jobs</a>
+            <a href="#">Features</a>
+          </div>
+
+          <div class="footer-item">
+            <p>Account</p>
+            <a href="#">Inbox</a>
+            <a href="#">Settings</a>
+            <a href="#">APS.pro</a>
+            <a href="#">Logout</a>
+          </div>
+
+          <div class="footer-item">
+            <p>Follow Us</p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+          </div>
+
+          <div class="footer-item">
+            <p>Help</p>
+            <a href="#">Track Music</a>
+            <a href="#">Community Support</a>
+            <a href="#">Community Guidelines</a>
+            <a href="#">Help</a>
+          </div>
+
+          <div class="footer-item">
+            <p>Goodies</p>
+            <a href="#">Download Scrobbler</a>
+            <a href="#">Developer API</a>
+            <a href="#">Free Music Downloads</a>
+            <a href="#">Merchandise</a>
+          </div>
+
+          <hr />
+        </div>
+        <div class="copyright">
+          <p>© 2025 Last.fm Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer ends -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./artist.js"></script>
+  </body>
+</html>

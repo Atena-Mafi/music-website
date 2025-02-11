@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Home.css" />
+    <title>Home</title>
+    <link rel="icon" href="data:," />
+  </head>
+
+  <body>
+    <!-- header starts -->
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container-fluid  navbarToggler">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- logo starts -->
+          <a class="navbar-brand ms-4" href="./Home.html">
+            <img
+              src="./assets/music-note-sound-circle-outline-512.webp"
+              alt="Music icone"
+              width="60"
+              height="60"
+            />
+          </a>
+          <!-- logo ends -->
+
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-3">
+              <li class="nav-item">
+                <a class="nav-link active"  id="searchIcon" href="#"
+                  ><i class="bi bi-search mt-5 me-3 active"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active d-flex align-items-center"
+                  aria-current="page"
+                  href="./Home.html"
+                >
+                  Home</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="./pages/Artists.html">Artists</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./pages/charts.html">Charts</a>
+              </li>
+              <!-- <li class="nav-item Library">
+                <a class="nav-link active"  href="./pages/Library.html">Library</a>
+              </li> -->
+              <!-- divider -->
+              <li class="nav-item divider"></li>
+              <!-- divider -->
+              <li class="nav-item">
+                <a class="nav-link active ms-3 Sign-In" href="./pages/Sign-IN.html">Sign In</a>
+              </li>
+              <li class="nav-item Sign-Up">
+                <a class="nav-link active Sign-Up text-dark" href="./pages/Sign-out.html">Sign Up</a>
+              </li>
+            </ul>
+            <form id="searchForm" class="d-none d-flex">
+            <label for="searching" class="form-label"></label>
+            <input class="form-control" id="searching" placeholder="Search for music...">
+           <div class="box-buttons">  <button id="closeSearch"><i class="bi bi-x-lg"></i></button>
+                  <button type="submit" class="btn  search-btn"><i class="bi bi-search"></i></button>
+                </div>
+                </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header ends -->
+
+    <main class="container-fluid">
+      <!-- Carousel Slider starts -->
+      <div
+        id="herocrasoul"
+        class="carousel slide d-none d-xl-block"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#herocrasoul"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#herocrasoul"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#herocrasoul"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#herocrasoul"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#herocrasoul"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+
+        <div class="carousel-inner"></div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#herocrasoul"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#herocrasoul"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Carousel Slider ends -->
+
+      <div class="para-hero">
+        <p>Tags to explore</p>
+      </div>
+
+      <!-- Tags starts -->
+      <div class="container-fluid box-container">
+        <div class="row top-row">
+          <div class="big-box1 col-sm-12 col-lg-6">
+            <div class="box-text">
+              <h2>Electronic</h2>
+              <p>
+                Electronic music refers to music that emphasizes the use of
+                electronic musical instruments or electronic music technology as
+                a central aspect of the sound of the music.
+              </p>
+            </div>
+            <div class="box-artists">
+              <div class="box-artists-top">
+                <article class="Artist1 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/43d7fa96248f4fc1cf17dc051ae87a2d.jpg#43d7fa96248f4fc1cf17dc051ae87a2d"
+                    alt="The Prodigy"
+                  />
+                  <a href="#">The Prodigy</a>
+                </article>
+                <article class="Artist2 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/f1b4a3612ced4a64ca3d046c345c2479.jpg#f1b4a3612ced4a64ca3d046c345c2479"
+                    alt="Massive Attack"
+                  />
+                  <a href="#">Massive Attack</a>
+                </article>
+              </div>
+              <div class="box-artists-bottom">
+                <article class="Artist3 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/3bece7f74158d0a66b157c113ec02b22.jpg#3bece7f74158d0a66b157c113ec02b22"
+                    alt="Depeche Mode"
+                  />
+                  <a href="#">Depeche Mode</a>
+                </article>
+
+                <article class="Artist4 me-5 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/ecf27a9c87d3bc173eb346550b055db0.jpg#ecf27a9c87d3bc173eb346550b055db0"
+                    alt="Björk"
+                  />
+                  <a href="#">Björk</a>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="small-boxs1 col-sm-12 col-lg-6">
+            <div class="f-row">
+              <article class="small-box sb1"><a href="#"> rock </a></article>
+              <article class="small-box sb2">
+                <a href="#">hip-hop</a>
+              </article>
+              <article class="small-box sb3"><a href="#"> indie </a></article>
+            </div>
+            <div class="s-row">
+              <article class="small-box sb4"><a href="#"> jazz </a></article>
+              <article class="small-box sb5"><a href="#"> reggae </a></article>
+              <article class="small-box sb6"><a href="#"> british </a></article>
+            </div>
+            <div class="th-row">
+              <article class="small-box sb7"><a href="#"> punk </a></article>
+              <article class="small-box sb8"><a href="#">80s </a></article>
+              <article class="small-box sb9"><a href="#"> dance </a></article>
+            </div>
+          </div>
+        </div>
+        <div class="row bottom-row">
+          <div class="small-boxs2 col-sm-12 col-lg-6">
+            <div class="f-row">
+              <article class="small-box sb21"><a href="#"> 
+                acoustic </a></article>
+              <article class="small-box sb22">
+                <a href="#">rnb</a>
+              </article>
+              <article class="small-box sb23"><a href="#"> hardcore </a></article>
+            </div>
+            <div class="s-row">
+              <article class="small-box sb24"><a href="#"> country </a></article>
+              <article class="small-box sb25"><a href="#">
+                blues </a></article>
+              <article class="small-box sb26"><a href="#"> 
+                alternative </a></article>
+            </div>
+            <div class="th-row">
+              <article class="small-box sb27"><a href="#"> classical</a></article>
+              <article class="small-box sb28"><a href="#">rap </a></article>
+              <article class="small-box sb29"><a href="#"> metal </a></article>
+            </div>
+          </div>
+
+          <div class="big-box2 col-sm-12 col-lg-6">
+
+
+            <div class="box-text">
+              <h2>Metal</h2>
+              <p>
+                Metal is a subgenre of rock music that developed in the late 1960s and early 1970s. With roots in blues-rock and psychedelic rock, the bands that created heavy metal developed a thick, massive sound characterized by highly amplified distortion and extended guitar solos.
+              </p>
+            </div>
+            <div class="box-artists2">
+              <div class="box-artists-top2">
+                <article class="Artist1 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/a008ec01b602ec9b51dda522d8a176f6.jpg#a008ec01b602ec9b51dda522d8a176f6"
+                    alt="System of a Down"
+                  />
+                  <a href="#">System of a Down</a>
+                </article>
+                <article class="Artist2 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/f1b4a3612ced4a64ca3d046c345c2479.jpg#f1b4a3612ced4a64ca3d046c345c2479"
+                    alt="Slipknotk"
+                  />
+                  <a href="#">Slipknotk</a>
+                </article>
+              </div>
+              <div class="box-artists-bottom2">
+                <article class="Artist3 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/f7ece7da4d40d070a04c01e2b4041cb5.jpg#f7ece7da4d40d070a04c01e2b4041cb5"
+                    alt="Rammstein"
+                  />
+                  <a href="#">Rammstein</a>
+                </article>
+
+                <article class="Artist4  me-5 arti">
+                  <img
+                    src="https://lastfm.freetls.fastly.net/i/u/770x0/548457179486d936657fd44c25962584.jpg#548457179486d936657fd44c25962584"
+                    alt="BIron Maiden"
+                  />
+                  <a href="#">Iron Maiden</a>
+                </article>
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Tags ends  -->
+
+
+<!-- searchbox starts -->
+ <div class="searchbox-music container-fluid">
+  <h2>Can’t see anything you like?</h2>
+<p>Tell us an artist you love to get personalised recommendations.
+  Artist
+  </p>
+
+  <div class="searchbox">
+    <label for="search" class="form-label"></label>
+    <input class="form-control middle-searchbox"  id="search" placeholder= "Enter an artist name...">
+    <button type="button" class="btn btn-light recommendations-btn">Get recommendations</button>
+  </div>
+
+</div> 
+<!-- searchbox ends -->
+
+
+
+  <!-- tracks cards starts -->
+
+  <div class="container-fluid Popular">
+    <span class="popularTitle">Popular Tracks</span>
+    <div class="popular-tracks mt-5">
+    </div>
+  </div>
+  <!-- tracks cards ends -->
+
+
+
+  <!-- Music Player Bar  starts -->
+
+  <div class="music-player  container-fluid d-none">
+
+    
+    <!-- music-Info -->
+<div class="music-Info">
+<div class="picture">
+  <img>
+</div>
+
+<div class="text-Info">
+  <h5 class="title"></h5>
+  <p  class="singer-name"></p>
+</div>
+
+</div>
+  <!-- music-Info -->
+
+<!-- music-controlers -->
+<div class="music-controlers">
+<div class="buttons">
+  <i class="bi bi-shuffle"></i>
+  <i class="bi bi-skip-backward-fill"></i>
+  <i class="bi bi-play-fill play"></i>
+ 
+  <i class="bi bi-fast-forward-fill"></i>
+  <i class="bi bi-arrow-repeat"></i>
+</div>
+
+<div class="progress-bar">
+<input type="range"   id="progress-bar"  min="0"  max="100" value="0">
+</div>
+</div>
+
+<!-- music-controlers ends -->
+
+
+
+<!-- music volum-controler starts -->
+<div class="volum-controler">
+  <i class=" volumeSign    bi  bi-volume-up-fill"></i>
+  <!-- <i class="bi bi-volume-mute-fill"></i> -->
+<input type="range"   id="volum-controler"  min="0" max="100" value="100">
+</div>
+
+<!-- music volum-controler ends -->
+
+
+<audio class="audioTrack"></audio>
+
+  </div>
+
+
+  <!-- Music Player Bar  ends -->
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+   <div class="container footer">
+<div class="footer-items">
+<div  class=" footer-item">
+<p>Company</p>
+<a href="#">About Last.fm</a>
+<a href="#">Contact Us</a>
+<a href="#">Jobs</a>
+<a href="#">Features</a>
+</div>
+
+
+
+
+<div  class=" footer-item">
+  <p>Account</p>
+  <a href="#">Inbox</a>
+  <a href="#">Settings</a>
+  <a href="#">APS.pro</a>
+  <a href="#">Logout</a>
+  </div>
+
+
+
+
+  <div  class=" footer-item">
+    <p>Follow Us</p>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
+    </div>
+
+
+
+
+
+  <div  class=" footer-item">
+  <p>Help</p>
+  <a href="#">Track Music</a>
+  <a href="#">Community Support</a>
+  <a href="#">Community Guidelines</a>
+  <a href="#">Help</a>
+  </div>
+
+
+    <div  class=" footer-item">
+      <p>Goodies</p>
+      <a href="#">Download Scrobbler</a>
+      <a href="#">Developer API</a>
+      <a href="#">Free Music Downloads</a>
+      <a href="#">Merchandise</a>
+      </div>
+    
+
+
+
+
+
+      
+      <hr>
+
+</div>
+<div  class="copyright"><p> © 2025 Last.fm Ltd. All rights reserved.</p></div>
+   </div>
+
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Home.js" defer></script>
+  </body>
+</html>

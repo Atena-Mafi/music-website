@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+a{
+
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+
+background-color:#0d0d0d;
+
+}
+
+
+
+
+
+.divider{
+  margin-top: 0.5rem;
+    height:30px;
+    border-left: 1px solid hwb(0 100% 0% / 0.705);
+   }
+
+
+   .Sign-Up{
+    background-color: #ffffff;
+    height:2.5rem;
+    width: 6rem;
+    color: black;
+    border-radius: 4px;
+    text-align: center;
+
+   }
+
+   .nav-item .nav-link{
+    position: relative;
+   }
+
+
+   .nav-item:not(:first-child) .nav-link::after{
+    content:"";
+    position:absolute;
+    left: 0;
+  bottom: 0; 
+   width: 0;
+   height: 2px;
+   background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+   }
+
+
+
+
+   .nav-item:not(:last-child) .nav-link:hover::after{
+    width: 100%;
+    
+ 
+   }
+
+   .navbar{
+ background-color: #b8a48e ;
+ height: 4.5rem;
+ display: flex;
+ align-items: center;
+   
+   }
+
+
+
+   
+   #searchForm{
+
+   width: 90%;
+    height: 4rem;
+  
+   }
+
+
+   #searching{
+
+    background-color:#b8a48e;
+    border: #b8a48e solid;
+    border-radius: 0%;
+    outline: none;
+    box-shadow: none;
+   }
+
+
+
+   .search-btn{
+     width: 100px;
+     background-color: #0d0d0d;
+     border-radius: 0%;
+     color: #b8a48e;
+     height: 4rem;
+   }
+
+   .box-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+
+ #closeSearch{
+  width:2%;
+  background-color:  #b8a48e;
+  border-radius: 0%;
+  color:#0d0d0d;
+  height: 4rem;
+  outline: none;
+  box-shadow: none;
+  border: none;
+   margin-right: 15px;
+  font-size:30px;
+
+  }
+
+
+   .search-btn:hover{
+   
+    background-color: #0d0d0d;
+
+  }
+
+
+
+.all{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0px;
+    height: 600px;
+  background-color: #b8a48e;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+
+.message{
+
+    background: url("https://www.last.fm/static/images/defaults/default_header.056b1680908c.jpg") no-repeat center/cover;
+    height: 600px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+      padding-top: 90px;
+      
+}
+  
+
+/* 
+form  */
+
+
+.formContainer{
+  
+    width: 90%;
+    height: 600px;
+
+}
+
+.formSignUp{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 60px;
+   
+}
+.col-md-4{
+    width: 90%;
+
+}
+
+
+
+/* 
+.btn{
+
+    background-color: grey
+} */
+
+
+
+
+
+/* form */
+
+
+
+
+
+
+
+   /* footer */
+
+
+.footer{
+
+    gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top: hwb(31 56% 28% / 0.267) solid 0.5px;
+      margin-top: 20px;
+    }
+    
+    
+    .footer-items{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+      width: 100%;
+      gap: 90px;
+      margin-left: 140px;
+    }
+    
+    
+    
+    .footer-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      width: 300px;
+      height: 250px;
+      color: #b8a48e;
+      gap: 8px;
+    }
+    
+    
+    
+    .footer-item p:hover{
+    
+       font-size: larger;
+      }
+    
+      .footer-item a:hover{
+    
+         font-size: large;
+        }
+      
+    
+    
+    
+    
+    
+    .footer-item p{
+      font-weight: 700;
+    }
+    
+    .copyright{
+      color: #b8a48e;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    
+    
+    
+    /* foooter */
+
+
+
+
+        
+@media(max-width:768px){
+
+    .nav-item a{
+  
+      color: #b8a48e !important ;
+    }
+  
+  
+  
+    .navbar{
+      background-color: #b8a48e ;
+      height: 4.5rem;
+      display: flex;
+      align-items: center;
+        z-index: 200;
+        margin-bottom: 40px;
+        }
+      
+     
+        
+        #searchForm{
+        margin-top: 10px;
+        width: 90%;
+         height: 4rem;
+        
+       
+        }
+     
+     
+        #searching{
+     
+         background-color:#b8a48e;
+         border: #b8a48e solid;
+         border-radius: 0%;
+         outline: none;
+         box-shadow: none;
+       
+        }
+     
+     
+     
+        .search-btn{
+          width: 60px;
+          background-color:  #b8a48e;
+          border-radius: 0%;
+          color: #0d0d0d;
+          height: 4rem;
+          margin-right:0px;
+        }
+     
+        .box-buttons{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+        }
+     
+     
+      #closeSearch{
+       width:30%;
+       background-color:  #b8a48e;
+       border-radius: 0%;
+       color:#0d0d0d;
+       height: 4rem;
+       outline: none;
+       box-shadow: none;
+       border: none;
+        margin-right: 15px;
+       font-size:20px;
+  
+       }
+     
+  
+  
+       .navbar-collapse.show{
+  
+        background-color:#0d0d0d ;
+       }
+  
+
+
+       .all{
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0px;
+        height: 500px;
+      background-color: #b8a48e;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width:90%;
+        border-radius: 15px;
+    }
+    
+    
+    .message{
+    
+        background: url("https://www.last.fm/static/images/defaults/default_header.056b1680908c.jpg") no-repeat center/cover;
+        height: 500px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+          padding-top: 90px;
+          font-size: 2px;
+    }
+      
+    
+    /* 
+    form  */
+    
+    
+    .formContainer{
+      
+        width: 90%;
+        height: 600px;
+    
+    }
+    
+    .formSignUp{
+        display: flex;
+        align-items:flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 5px;
+        font-size: 12px;
+       
+    }
+    .col-md-4{
+        width: 90%;
+    
+    }
+    
+    
+    
+    /* 
+    .btn{
+    
+        background-color: grey
+    } */
+    
+    
+    
+    
+    
+    /* form */
+    
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+.footer{
+
+    gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top: hwb(31 56% 28% / 0.267) solid 0.5px;
+      margin-top: 20px;
+    }
+    
+    
+    .footer-items{
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    flex-direction: row;
+      width: 100%;
+      height: 240px;
+      gap: 0px;
+      margin-left: 0px;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    
+    
+    .footer-item{
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      width: 110px;
+      height: 120px;
+      color: #b8a48e;
+      gap: 12px;
+    font-size: 10px;
+      margin-top: 5px;
+      line-height:10px;
+      text-wrap: wrap;
+    margin-bottom: 0;
+    padding: 0;
+    }
+    
+    
+    
+    .footer-item p:hover{
+    
+       font-size: smaller;
+      }
+    
+    
+    .footer-item p{
+      font-weight: 0;
+     
+      margin-bottom: 0;
+    }
+    
+    .copyright{
+      color: #b8a48e;
+      font-weight: 100;
+      margin-bottom: 5px;
+      font-size: 8px;
+    }
+    
+    
+    
+    
+    /* foooter */
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+  
+    }  
