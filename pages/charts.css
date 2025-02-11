@@ -134,6 +134,242 @@ background-color:#0d0d0d;
 
 
 
+/* para-hero */
+
+.para-hero{
+margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b8a48e;
+  position: relative;
+  padding-bottom: 10px;
+ margin-top: 40px;
+ }
+
+
+ .para-hero::after{
+  background-color: #b8a48e;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  width: 2%;
+  height: 2px;
+  margin: 0 auto;
+ }
+
+
+
+ /* para-hero */
+
+
+
+ /* boxes */
+
+
+ .boxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 40px;
+  width: 100%;
+
+
+ }
+
+
+
+ .tracksList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+ }
+
+
+ .right-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  gap: 40px;
+ }
+
+ .left-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  gap: 40px;
+ }
+
+
+
+
+
+ .card{
+
+  width:480px;
+  height: 70px;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  outline: none;
+  border-bottom: #b8a48e7c solid 0.5px ;
+  background-color: #0d0d0d;
+  border-radius: 0%;
+ 
+ }
+
+
+ .rate{
+ color: #b8a48e;
+  margin-right: 16px;
+ }
+
+.photo{
+  margin-right:22px;
+}
+
+
+
+.photo:hover{
+filter: brightness(0.6);
+}
+
+
+
+
+ .photo img{
+  
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+ }
+
+ .artistPhoto{
+  border-radius: 50%;
+ }
+
+
+
+ .artistPhoto:hover{
+  filter: brightness(0.6);
+ }
+
+
+
+
+ .artistPhoto img{
+
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+  border-radius: 50%;
+
+ }
+
+
+
+ .info{
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  justify-content: center;
+line-height: 12px;
+font-size: 14px;
+
+text-align: left;
+ }
+
+
+.top-right{
+  width: 400px;
+  height: 300px;
+ display: flex;
+  flex-direction:row;
+  align-items:flex-end;
+  justify-content: flex-start;
+position: relative;
+filter: brightness(0.6);
+box-shadow: 5px 5px 15px 5px #000000;
+}
+
+
+
+
+
+.top-right:hover{
+
+  box-shadow: 5px 5px 15px 5px#b8a48e;
+}
+
+
+
+
+
+
+
+.top-right::after{
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color:#fdfdfd1e;
+}
+.top-right img{
+margin-left: 30px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 7px;
+  filter: brightness(0.4);
+}
+
+
+.trackInfoTop{
+width: 100%;
+color:#0d0d0d;
+font-size: 25px;
+font-weight: 700;
+  display: flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+ margin-left: 5px;
+}
+
+.top-left{
+  width: 400px;
+  height: 300px;
+ display: flex;
+  flex-direction:row;
+  align-items:flex-end;
+  justify-content: flex-start;
+position: relative;
+filter: brightness(0.6);
+box-shadow: 5px 5px 15px 5px #000000;
+
+}
+
+
+
+
+.top-left:hover{
+
+  box-shadow: 5px 5px 15px 5px#b8a48e;
+
+}
 
 
 
@@ -142,6 +378,113 @@ background-color:#0d0d0d;
 
 
 
+
+.top-left img{
+  margin-left: 30px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 7px;
+  border-radius: 50%;
+  border: #b8a48e solid 1px;
+}
+
+.top-left::after{
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color:#fdfdfd1e;
+}
+
+
+
+.artistInfoTop{
+
+  width: 100%;
+  color: #0d0d0d;
+  font-size: 25px;
+  font-weight: 700;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+   margin-left: 7px;
+   margin-bottom: 2px;
+}
+
+
+
+
+.artistList{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+
+
+
+
+.display-6{
+
+  margin-right:200px;
+}
+
+
+
+
+
+
+
+ /* boxes */
+
+
+
+
+
+/* serch box starts middle */
+.searchbox-music{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 70px;
+     
+      color: #b8a48e;
+      background: url("https://www.last.fm/static/images/music-landing/albums_bg_1E6875.8cb84eb88196.jpg") no-repeat center/cover ;
+      filter: brightness(0.9);
+      padding: 20px;
+}
+
+
+
+.searchbox{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+margin-bottom: 30px;
+
+}
+
+
+
+.searchbox input{
+width: 350px;
+color: #b8a48e;
+
+}
+
+/* serch box end middle*/
 
 
 
@@ -225,3 +568,93 @@ background-color:#0d0d0d;
     
     
     /* foooter */
+
+
+
+
+
+
+
+
+
+        
+@media(max-width:768px){
+
+  .nav-item a{
+
+    color: #b8a48e !important ;
+  }
+
+
+
+  .navbar{
+    background-color: #b8a48e ;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+      z-index: 200;
+      margin-bottom: 40px;
+      }
+    
+   
+      
+      #searchForm{
+      margin-top: 10px;
+      width: 90%;
+       height: 4rem;
+      
+     
+      }
+   
+   
+      #searching{
+   
+       background-color:#b8a48e;
+       border: #b8a48e solid;
+       border-radius: 0%;
+       outline: none;
+       box-shadow: none;
+     
+      }
+   
+   
+   
+      .search-btn{
+        width: 60px;
+        background-color:  #b8a48e;
+        border-radius: 0%;
+        color: #0d0d0d;
+        height: 4rem;
+        margin-right:0px;
+      }
+   
+      .box-buttons{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+      }
+   
+   
+    #closeSearch{
+     width:30%;
+     background-color:  #b8a48e;
+     border-radius: 0%;
+     color:#0d0d0d;
+     height: 4rem;
+     outline: none;
+     box-shadow: none;
+     border: none;
+      margin-right: 15px;
+     font-size:20px;
+
+     }
+   
+
+
+     .navbar-collapse.show{
+
+      background-color:#0d0d0d ;
+     }
+
+
+  }  

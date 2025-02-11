@@ -158,7 +158,7 @@ if(artists){
         artistCard.classList.add("card");
         artistCard.innerHTML=`<img src="${item.image}" class="card-img" alt="${item.name}" onerror="this.onerror=null; this.src='https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg';">
         <div class="card-img-overlay">
-          <a class="card-text card-text3">${item.name}</a>
+          <a class="card-text3 ">${item.name}</a>
         </div>
         `;
         artistsContainer.append(artistCard);

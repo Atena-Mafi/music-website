@@ -41,3 +41,30 @@ if(e.key==="Enter"){
 }
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const navbarToggler=document.querySelector(".navbarToggler");
+const navbarCollapse=document.querySelector(".navbar-collapse");
+navbarToggler.addEventListener("click",(e)=>{
+
+setTimeout(()=>{
+if ( navbarCollapse.classList.contains("show")) {
+  navbarCollapse.style.backgroundColor=" #0d0d0d";
+}
+
+
+},100)
+});

@@ -482,3 +482,94 @@ Artists */
     
     
     /* foooter */
+
+
+
+
+
+
+
+
+
+
+        
+@media(max-width:768px){
+
+    .nav-item a{
+  
+      color: #b8a48e !important ;
+    }
+  
+  
+  
+    .navbar{
+      background-color: #b8a48e ;
+      height: 4.5rem;
+      display: flex;
+      align-items: center;
+        z-index: 200;
+        margin-bottom: 40px;
+        }
+      
+     
+        
+        #searchForm{
+        margin-top: 10px;
+        width: 90%;
+         height: 4rem;
+        
+       
+        }
+     
+     
+        #searching{
+     
+         background-color:#b8a48e;
+         border: #b8a48e solid;
+         border-radius: 0%;
+         outline: none;
+         box-shadow: none;
+       
+        }
+     
+     
+     
+        .search-btn{
+          width: 60px;
+          background-color:  #b8a48e;
+          border-radius: 0%;
+          color: #0d0d0d;
+          height: 4rem;
+          margin-right:0px;
+        }
+     
+        .box-buttons{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+        }
+     
+     
+      #closeSearch{
+       width:30%;
+       background-color:  #b8a48e;
+       border-radius: 0%;
+       color:#0d0d0d;
+       height: 4rem;
+       outline: none;
+       box-shadow: none;
+       border: none;
+        margin-right: 15px;
+       font-size:20px;
+  
+       }
+     
+  
+  
+       .navbar-collapse.show{
+  
+        background-color:#0d0d0d ;
+       }
+  
+  
+    }  
